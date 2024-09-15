@@ -45,7 +45,7 @@ export class ActorService {
 
     async byId(_id: string) {
         const actor = await this.ActorModel.findById(_id)
-        if(!actor) throw new NotFoundException('Genre not found')
+        if(!actor) throw new NotFoundException('Actor not found')
 
         return actor
     }
@@ -66,7 +66,7 @@ export class ActorService {
             new: true,
         }).exec()
 
-        if(!updateDoc) throw new NotFoundException('Genre not found')
+        if(!updateDoc) throw new NotFoundException('Actor not found')
 
         return updateDoc
     }
@@ -74,7 +74,7 @@ export class ActorService {
     async delete(id:string){
         const deleteDoc = await this.ActorModel.findByIdAndDelete(id).exec()
 
-        if(!deleteDoc) throw new NotFoundException('Genre not found')
+        if(!deleteDoc) throw new NotFoundException('Actor not found')
 
         return deleteDoc
     }
