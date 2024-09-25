@@ -13,7 +13,7 @@ const SearchList:FC<{movies: IMovie[]}> = ({movies}) => {
             <Link key={movie._id} href={getMovieUrl(movie.slug)}>
               <Image 
                 src={movie.poster}
-                width={57}
+                width={50}
                 height={50}
                 alt={movie.title}
                 objectFit="cover"
@@ -22,7 +22,6 @@ const SearchList:FC<{movies: IMovie[]}> = ({movies}) => {
                   objectFit: 'cover',
                   objectPosition: 'top',
                   height: '50px',
-                  
                 }}
                 draggable={false}
               />
