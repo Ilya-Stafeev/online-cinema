@@ -7,10 +7,7 @@ import Link from "next/link"
 import { getGenresListEach } from "@/utils/movie/getGenresListEach"
 import { MaterialIcon } from "@/components/ui/icons/MatetialIcon"
 
-const MovieItem:FC<{movie: IMovie}> = ({ movie }) => {
-
-    console.log(movie);
-    
+const MovieItem:FC<{movie: IMovie}> = ({ movie }) => {    
   return (
     <div className={styles.item}>
         <Link href={getMovieUrl(movie.slug)}>
