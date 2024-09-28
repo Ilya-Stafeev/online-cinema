@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 
 const Heading:FC<{title: string, className?: string}> = ({title, className = ''}) => {
   return (
